@@ -384,18 +384,26 @@ a:hover { text-decoration: underline; }
   gap: 2rem;
 }
 .theme-card { text-align: center; }
-.theme-swatch {
+.theme-avatar {
   width: 96px;
   height: 96px;
-  border-radius: 50%;
   margin: 0 auto 0.75rem;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  gap: 6px;
-  padding-bottom: 12px;
+  font-size: 2.75rem;
+  line-height: 1;
 }
-.theme-swatch span { width: 14px; height: 14px; border-radius: 50%; display: block; }
+.theme-avatar--circle { border-radius: 50%; }
+.theme-avatar--square {
+  border-radius: 10px;
+  width: 76px;
+  height: 76px;
+  font-family: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0b2942;
+}
 .theme-card__name { font-weight: 700; color: var(--text-bright); margin: 0; }
 .theme-card__author { color: var(--text-dim); font-size: 0.85rem; margin: 0.15rem 0 0.75rem; }
 .button--theme {
