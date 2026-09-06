@@ -69,12 +69,6 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
   flex-wrap: wrap;
 }
-.app__menu {
-  display: flex;
-  gap: 1.1rem;
-  font-size: 0.8rem;
-  color: var(--text);
-}
 .app__title {
   font-size: 0.8rem;
   color: var(--text);
@@ -448,5 +442,4 @@ a:hover { text-decoration: underline; }
 }
 @media (max-width: 480px) {
   .activitybar { width: 40px; }
-  .app__menu, .app__title { display: none; }
 }
