@@ -1,22 +1,41 @@
 # Portfolio
 
-A clean, professional cybersecurity-engineer portfolio: static HTML and CSS
-only, no JavaScript, no build step.
+A cybersecurity-engineer portfolio presented as a code editor (VS Code style):
+an activity bar, a file explorer, tabs, and a status bar, where each "file"
+is actually a section of the site — inspired by yonasatinafu.com's editor-style
+portfolio.
 
 ## Structure
 
-- `index.html` — the whole page: header/nav, hero/about, projects, certifications,
-  and contact sections.
-- `css/style.css` — theme (light + dark via `prefers-color-scheme`), layout,
-  responsive rules, and focus-visible styles.
+- `index.html` — the whole app: title bar, activity bar, file explorer, tab
+  bar, and one `<section class="pane">` per "file" (home.jsx, about.html,
+  contact.yml, projects.py, papers.json, github.md, resume.pdf).
+- `css/style.css` — the editor theme (dark, VS Code-inspired), layout, and
+  responsive rules.
+- `js/app.js` — makes clicking a file/tab show its pane instead of following
+  the link. **Progressive enhancement**: without JavaScript, every pane
+  simply stacks into one normal scrolling page — the site is never blank or
+  broken if a script fails to load.
 - `assets/resume.pdf` — **placeholder**, replace with a real resume.
 
 ## Editing content
 
-Everything is plain HTML in `index.html` — edit the text directly. To add a
-project, copy an existing `<article class="project-card">` block inside
-`#projects` and edit its text. Same pattern for certifications
-(`<li>` entries in `.cert-list`) and contact links (`.contact-list`).
+Each "file" is a `<section class="pane" data-pane="...">` in `index.html` —
+edit its content directly:
+
+- `home.jsx` → `#panel-home` — name, tagline, skill tags, avatar initials.
+- `about.html` → `#panel-about` — bio.
+- `contact.yml` → `#panel-contact` — email/LinkedIn/GitHub/location, styled
+  as YAML.
+- `projects.py` → `#panel-projects` — project cards (copy an existing
+  `<article class="project-card">` to add one).
+- `papers.json` → `#panel-certs` — certifications list.
+- `github.md` → `#panel-github` — a GitHub-profile-style card + repo grid.
+- `resume.pdf` → `#panel-resume` — download button + inline PDF preview.
+
+The sidebar file list and the tab bar are two separate copies of the same
+navigation (matching the real editor's layout) — if you rename a section,
+update both `data-target` links.
 
 ## Running locally
 
@@ -30,6 +49,7 @@ static host with no code changes.
 
 ## Before this goes live
 
-Replace every placeholder — name, bio, project names/descriptions,
-certifications, email, LinkedIn, GitHub, and `assets/resume.pdf` — with your
-real information.
+Replace every placeholder — name, tagline, avatar initials ("YN"), bio,
+skills, project names/descriptions, GitHub username/repos, certifications,
+email, LinkedIn, GitHub, and `assets/resume.pdf` — with your real
+information.
