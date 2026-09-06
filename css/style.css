@@ -259,7 +259,6 @@ a:hover { text-decoration: underline; }
 .fact-list li { margin-bottom: 0.6rem; line-height: 1.7; }
 .fact-emoji { margin-right: 0.25rem; }
 .highlight-role { color: var(--plain-green); font-weight: 700; }
-.redacted { filter: blur(5px); user-select: none; }
 
 /* ===== home pane ===== */
 .pane--home { position: relative; overflow: hidden; }
