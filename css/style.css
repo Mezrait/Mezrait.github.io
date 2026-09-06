@@ -373,7 +373,10 @@ a:hover { text-decoration: underline; }
 .github-card__stats { color: var(--text-dim); margin: 0.15rem 0 0; font-size: 0.85rem; }
 
 /* ===== resume ===== */
-.resume-embed { width: 100%; height: 640px; border: 1px solid var(--bg-sidebar); border-radius: 8px; margin-top: 1rem; }
+.pane__inner--wide { max-width: none; }
+.resume-header { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.resume-fallback { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 1.25rem; }
+.resume-embed { width: 100%; height: 80vh; min-height: 500px; border: 1px solid var(--bg-sidebar); border-radius: 8px; display: block; }
 
 /* ===== status bar ===== */
 .statusbar {
