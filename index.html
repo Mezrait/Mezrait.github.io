@@ -5,7 +5,7 @@
 <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your Name — Portfolio</title>
-<meta name="description" content="Portfolio of Your Name, a cybersecurity engineer, presented as an editor: About, Projects, Certifications, GitHub, Resume, and Contact.">
+<meta name="description" content="Portfolio of Your Name, a cybersecurity engineer, presented as an editor: About, Projects, Publications, GitHub, Resume, and Contact.">
 <meta property="og:title" content="Your Name — Portfolio">
 <meta property="og:description" content="Portfolio of Your Name, a cybersecurity engineer, presented as an editor.">
 <meta property="og:type" content="website">
@@ -22,155 +22,218 @@
       <span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Run</span><span>Terminal</span><span>Help</span>
     </nav>
     <span class="app__title">Your Name - Portfolio</span>
+    <div class="app__dots" aria-hidden="true">
+      <span class="dot dot--yellow"></span><span class="dot dot--green"></span><span class="dot dot--red"></span>
+    </div>
   </div>
 
   <div class="app__body">
     <nav class="activitybar" aria-label="Jump to section">
-      <a href="#panel-home" data-target="home" class="activitybar__icon" aria-label="Home" title="Home">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 11.5 12 4l8 7.5"/><path d="M6 10v9h12v-9"/></svg>
-      </a>
-      <a href="#panel-github" data-target="github" class="activitybar__icon" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.2 2.2M16.2 16.2l2.2 2.2M18.4 5.6l-2.2 2.2M7.8 16.2l-2.2 2.2"/></svg>
-      </a>
-      <a href="#panel-projects" data-target="projects" class="activitybar__icon" aria-label="Projects" title="Projects">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 9 4 12l4 3M16 9l4 3-4 3M13.5 7l-3 10"/></svg>
-      </a>
-      <a href="#panel-about" data-target="about" class="activitybar__icon" aria-label="About" title="About">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c1.2-4 4-6 7-6s5.8 2 7 6"/></svg>
-      </a>
-      <a href="#panel-contact" data-target="contact" class="activitybar__icon" aria-label="Contact" title="Contact">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 6.5 8 6 8-6"/></svg>
-      </a>
+      <div class="activitybar__top">
+        <a href="#panel-home" data-target="home" class="activitybar__icon is-active" aria-label="Explorer" title="Explorer">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h9l3 3v13H4z"/><path d="M13 4v3h3"/></svg>
+        </a>
+        <a href="#panel-github" data-target="github" class="activitybar__icon" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.5v-1.95c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.46 1.14 3.06.88.1-.69.37-1.15.67-1.42-2.35-.27-4.82-1.17-4.82-5.22 0-1.15.41-2.09 1.08-2.83-.11-.27-.47-1.36.1-2.83 0 0 .88-.28 2.88 1.08a10 10 0 0 1 5.24 0c2-1.36 2.88-1.08 2.88-1.08.57 1.47.21 2.56.1 2.83.67.74 1.08 1.68 1.08 2.83 0 4.06-2.48 4.95-4.84 5.21.38.33.72.97.72 1.96v2.9c0 .27.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"/></svg>
+        </a>
+        <a href="#panel-projects" data-target="projects" class="activitybar__icon" aria-label="Projects" title="Projects">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 8 4 12l4 4M16 8l4 4-4 4"/></svg>
+        </a>
+        <a href="#panel-about" data-target="about" class="activitybar__icon" aria-label="About" title="About">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3.5 20 8.5 8.5 20 3.5 20 3.5 15z"/><path d="M13 5.5 18 10.5"/></svg>
+        </a>
+        <a href="#panel-contact" data-target="contact" class="activitybar__icon" aria-label="Contact" title="Contact">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5.5" width="17" height="13" rx="1.5"/><path d="m4 6.5 8 6 8-6"/></svg>
+        </a>
+      </div>
+      <div class="activitybar__bottom">
+        <a href="#panel-about" data-target="about" class="activitybar__icon" aria-label="Profile" title="Profile">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.3-4.2 4.2-6.3 7.5-6.3s6.2 2.1 7.5 6.3"/></svg>
+        </a>
+        <span class="activitybar__icon activitybar__icon--static" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2.4M12 18.1v2.4M20.5 12h-2.4M5.9 12H3.5M17.7 6.3l-1.7 1.7M8 16l-1.7 1.7M17.7 17.7 16 16M8 8 6.3 6.3"/></svg>
+        </span>
+      </div>
     </nav>
 
     <aside class="explorer">
       <p class="explorer__heading">Explorer</p>
       <p class="explorer__folder">&#9662; PORTFOLIO</p>
       <ul class="explorer__files">
-        <li><a href="#panel-home" data-target="home" class="file-item is-active"><span class="file-glyph" style="color:#61dafb"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a></li>
-        <li><a href="#panel-about" data-target="about" class="file-item"><span class="file-glyph" style="color:#e6743a"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a></li>
+        <li><a href="#panel-home" data-target="home" class="file-item is-active"><span class="file-glyph" style="color:#8be9fd"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a></li>
+        <li><a href="#panel-about" data-target="about" class="file-item"><span class="file-glyph" style="color:#ffb86c"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a></li>
         <li><a href="#panel-contact" data-target="contact" class="file-item"><span class="file-chip file-chip--yml">YML</span>contact.yml</a></li>
         <li><a href="#panel-projects" data-target="projects" class="file-item"><span class="file-glyph"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.2c-3.7 0-3.9 1.6-3.9 1.6l.01 1.7h3.95v.6H6.8s-2.9-.3-2.9 4.2 2.5 4.3 2.5 4.3h1.5v-1.9s-.1-2.5 2.5-2.5h3.5s2.3.03 2.3-2.2V4.6s.35-2.4-4.2-2.4z" fill="#4B8BBE"/><path d="M12 21.8c3.7 0 3.9-1.6 3.9-1.6l-.01-1.7H11.9v-.6h5.3s2.9.3 2.9-4.2-2.5-4.3-2.5-4.3h-1.5v1.9s.1 2.5-2.5 2.5H9.9s-2.3-.03-2.3 2.2v3.8s-.35 2.4 4.2 2.4z" fill="#FFD43B"/></svg></span>projects.py</a></li>
-        <li><a href="#panel-certs" data-target="certs" class="file-item"><span class="file-chip file-chip--json">{ }</span>papers.json</a></li>
-        <li><a href="#panel-github" data-target="github" class="file-item"><span class="file-glyph file-glyph--text" style="color:#c792ea">M&darr;</span>github.md</a></li>
-        <li><a href="#panel-resume" data-target="resume" class="file-item"><span class="file-glyph" style="color:#b085f5"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a></li>
+        <li><a href="#panel-publications" data-target="publications" class="file-item"><span class="file-chip file-chip--json">{ }</span>papers.json</a></li>
+        <li><a href="#panel-github" data-target="github" class="file-item"><span class="file-glyph file-glyph--text" style="color:#ff79c6">M&darr;</span>github.md</a></li>
+        <li><a href="#panel-resume" data-target="resume" class="file-item"><span class="file-glyph" style="color:#bd93f9"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a></li>
       </ul>
     </aside>
 
     <div class="editor">
       <div class="tabbar">
-        <a href="#panel-home" data-target="home" class="tab is-active"><span class="file-glyph" style="color:#61dafb"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a>
-        <a href="#panel-about" data-target="about" class="tab"><span class="file-glyph" style="color:#e6743a"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a>
+        <a href="#panel-home" data-target="home" class="tab is-active"><span class="file-glyph" style="color:#8be9fd"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a>
+        <a href="#panel-about" data-target="about" class="tab"><span class="file-glyph" style="color:#ffb86c"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a>
         <a href="#panel-contact" data-target="contact" class="tab"><span class="file-chip file-chip--yml">YML</span>contact.yml</a>
         <a href="#panel-projects" data-target="projects" class="tab"><span class="file-glyph"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.2c-3.7 0-3.9 1.6-3.9 1.6l.01 1.7h3.95v.6H6.8s-2.9-.3-2.9 4.2 2.5 4.3 2.5 4.3h1.5v-1.9s-.1-2.5 2.5-2.5h3.5s2.3.03 2.3-2.2V4.6s.35-2.4-4.2-2.4z" fill="#4B8BBE"/><path d="M12 21.8c3.7 0 3.9-1.6 3.9-1.6l-.01-1.7H11.9v-.6h5.3s2.9.3 2.9-4.2-2.5-4.3-2.5-4.3h-1.5v1.9s.1 2.5-2.5 2.5H9.9s-2.3-.03-2.3 2.2v3.8s-.35 2.4 4.2 2.4z" fill="#FFD43B"/></svg></span>projects.py</a>
-        <a href="#panel-certs" data-target="certs" class="tab"><span class="file-chip file-chip--json">{ }</span>papers.json</a>
-        <a href="#panel-github" data-target="github" class="tab"><span class="file-glyph file-glyph--text" style="color:#c792ea">M&darr;</span>github.md</a>
-        <a href="#panel-resume" data-target="resume" class="tab"><span class="file-glyph" style="color:#b085f5"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a>
+        <a href="#panel-publications" data-target="publications" class="tab"><span class="file-chip file-chip--json">{ }</span>papers.json</a>
+        <a href="#panel-github" data-target="github" class="tab"><span class="file-glyph file-glyph--text" style="color:#ff79c6">M&darr;</span>github.md</a>
+        <a href="#panel-resume" data-target="resume" class="tab"><span class="file-glyph" style="color:#bd93f9"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a>
       </div>
 
       <div class="editor__panes" id="editor-content">
 
         <section id="panel-home" class="pane pane--home is-active" data-pane="home">
-          <p class="pane__bgtext" aria-hidden="true">SECURITY</p>
+          <p class="pane__bgtext pane__bgtext--1" aria-hidden="true">SOC</p>
+          <p class="pane__bgtext pane__bgtext--2" aria-hidden="true">IR</p>
+          <p class="pane__bgtext pane__bgtext--3" aria-hidden="true">Security</p>
           <div class="pane__inner">
             <div class="home__text">
-              <p class="home__tagline">Cybersecurity Engineer <span class="caret" aria-hidden="true">|</span></p>
               <h1 class="home__name">Your Name</h1>
+              <p class="home__tagline">Cybersecurity Engineer | Detection &amp; Response<span class="caret" aria-hidden="true">|</span></p>
               <p class="label">Skill Set</p>
               <ul class="skills">
-                <li class="skill skill--a">SIEM</li>
-                <li class="skill skill--b">Threat Hunting</li>
-                <li class="skill skill--c">Incident Response</li>
-                <li class="skill skill--d">Python</li>
-                <li class="skill skill--e">Network Forensics</li>
-                <li class="skill skill--a">AWS Security</li>
-                <li class="skill skill--b">Linux</li>
-                <li class="skill skill--c">Splunk</li>
-                <li class="skill skill--d">Wireshark</li>
-                <li class="skill skill--e">Vulnerability-Management</li>
-                <li class="skill skill--a">SOC-Operations</li>
-                <li class="skill skill--b">Penetration-Testing</li>
+                <li class="skill" style="border-color:#3219a2">SIEM</li>
+                <li class="skill" style="border-color:#20ff93">Threat Hunting</li>
+                <li class="skill" style="border-color:#e879f9">Incident Response</li>
+                <li class="skill" style="border-color:#f7df1e">Python</li>
+                <li class="skill" style="border-color:#61dafb">Network Forensics</li>
+                <li class="skill" style="border-color:#3c873a">AWS Security</li>
+                <li class="skill" style="border-color:#ef7171">Linux</li>
+                <li class="skill" style="border-color:#ee5903">Splunk</li>
+                <li class="skill" style="border-color:#a78bfa">Wireshark</li>
+                <li class="skill" style="border-color:#e8ff76">Vulnerability-Management</li>
+                <li class="skill" style="border-color:#14b8a6">SOC-Operations</li>
+                <li class="skill" style="border-color:#ff76d6">Penetration-Testing</li>
               </ul>
               <div class="home__actions">
                 <a class="button button--primary" href="#panel-about" data-target="about">About Me</a>
                 <a class="button button--outline" href="#panel-contact" data-target="contact">Contact</a>
               </div>
             </div>
-            <div class="home__avatar" aria-hidden="true">YN</div>
+            <div class="home__picture">
+              <div class="home__avatar" aria-hidden="true">YN</div>
+            </div>
           </div>
         </section>
 
         <section id="panel-about" class="pane pane--about" data-pane="about">
           <div class="pane__inner pane__inner--doc">
             <h2>About Me</h2>
-            <div class="code-pane">
-              <div class="code-line"><span class="ln">1</span><span class="code"><span class="tok-punc">&lt;</span><span class="tok-tag">section</span> <span class="tok-attr">id</span>=<span class="tok-str">"about"</span><span class="tok-punc">&gt;</span></span></div>
-              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;</span><span class="tok-tag">h1</span><span class="tok-punc">&gt;</span>Your Name<span class="tok-punc">&lt;/</span><span class="tok-tag">h1</span><span class="tok-punc">&gt;</span></span></div>
-              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;</span><span class="tok-tag">p</span><span class="tok-punc">&gt;</span></span></div>
-              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;Replace this with two or three real sentences: your focus area</span></div>
-              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;(e.g. detection engineering, incident response, offensive</span></div>
-              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;security), a couple of years of experience or standout</span></div>
-              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;achievements, and what kind of role you're looking for.</span></div>
-              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;/</span><span class="tok-tag">p</span><span class="tok-punc">&gt;</span></span></div>
-              <div class="code-line"><span class="ln">9</span><span class="code"><span class="tok-punc">&lt;/</span><span class="tok-tag">section</span><span class="tok-punc">&gt;</span></span></div>
-            </div>
+            <ul class="fact-list">
+              <li><span class="fact-emoji" aria-hidden="true">&#128214;</span> Bachelor of Science, Cybersecurity at <a href="#">Your University</a> [Aug 2022 &ndash; May 2026]</li>
+              <li><span class="fact-emoji" aria-hidden="true">&#128737;&#65039;</span> Interests: Detection Engineering, Incident Response, Threat Hunting, Cloud Security.</li>
+              <li><span class="fact-emoji" aria-hidden="true">&#128187;</span> <span class="highlight-role">Current Role: SOC Analyst Intern</span> at <a href="#">Your Company</a>.</li>
+            </ul>
+
+            <h3>Relevant Experience</h3>
+            <ol class="fact-list fact-list--numbered">
+              <li><a href="#">SOC Analyst Intern</a> at <a href="#">Your Company</a>: monitored SIEM alerts, triaged incidents, and reduced false-positive rate by roughly 20%. [Jun 2025 &ndash; Aug 2025, Your City]</li>
+              <li><a href="#">IT Security Assistant</a> at <a href="#">Your Company</a>: assisted with vulnerability scanning and patch management across endpoints. [Jan 2025 &ndash; May 2025, Your City]</li>
+            </ol>
+
+            <h3>Additional Experience</h3>
+            <ol class="fact-list fact-list--numbered">
+              <li><a href="#">Cybersecurity Club</a> at <a href="#">Your University</a>: organized CTF practice sessions for new members. [Sep 2023 &ndash; present]</li>
+            </ol>
           </div>
         </section>
 
         <section id="panel-contact" class="pane pane--contact" data-pane="contact">
           <div class="pane__inner pane__inner--doc">
-            <h2>Find Me On</h2>
+            <h3>Find Me On</h3>
             <div class="code-pane">
-              <div class="code-line"><span class="ln">1</span><span class="code"><span class="tok-key">tag</span><span class="tok-punc">:</span> <span class="tok-str">production</span></span></div>
-              <div class="code-line"><span class="ln">2</span><span class="code"><span class="tok-key">YourName</span><span class="tok-punc">:</span></span></div>
-              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-punc">-</span> <span class="tok-key">contact</span><span class="tok-punc">:</span></span></div>
-              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">email</span><span class="tok-punc">:</span> <a class="tok-str" href="mailto:you@example.com">you@example.com</a></span></div>
-              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">phone</span><span class="tok-punc">:</span> <span class="tok-num">null</span></span></div>
-              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">linkedin</span><span class="tok-punc">:</span> <a class="tok-str" href="https://www.linkedin.com/in/yourname/">linkedin.com/in/yourname</a></span></div>
-              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">github</span><span class="tok-punc">:</span> <a class="tok-str" href="https://github.com/yourhandle">github.com/yourhandle</a></span></div>
-              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">location</span><span class="tok-punc">:</span> <span class="tok-str">City, Country</span></span></div>
+              <div class="code-line"><span class="ln">1</span><span class="code">tag: <a href="#">production</a></span></div>
+              <div class="code-line"><span class="ln">2</span><span class="code">YourName:</span></div>
+              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;- contact:</span></div>
+              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;Email: <a href="mailto:you@example.com">you@example.com</a></span></div>
+              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;Phone: <a href="#">null</a></span></div>
+              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;GitHub: <a href="https://github.com/yourhandle">github.com/yourhandle</a></span></div>
+              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;LinkedIn: <a href="https://www.linkedin.com/in/yourname/">linkedin.com/in/yourname</a></span></div>
+              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;Portfolio Website: <a href="/">Website</a></span></div>
             </div>
           </div>
         </section>
 
         <section id="panel-projects" class="pane pane--projects" data-pane="projects">
           <div class="pane__inner pane__inner--doc">
-            <h2>Projects</h2>
-            <div class="code-pane">
-              <div class="code-line"><span class="ln">1</span><span class="code">projects = [</span></div>
-              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
-              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
-              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
-              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Python"</span>, <span class="tok-str">"Zeek"</span>],</span></div>
-              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
-              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
-              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
-              <div class="code-line"><span class="ln">9</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
-              <div class="code-line"><span class="ln">10</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Node.js"</span>, <span class="tok-str">"REST API"</span>],</span></div>
-              <div class="code-line"><span class="ln">11</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
-              <div class="code-line"><span class="ln">12</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
-              <div class="code-line"><span class="ln">13</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
-              <div class="code-line"><span class="ln">14</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
-              <div class="code-line"><span class="ln">15</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Python"</span>, <span class="tok-str">"boto3"</span>],</span></div>
-              <div class="code-line"><span class="ln">16</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
-              <div class="code-line"><span class="ln">17</span><span class="code">]</span></div>
+            <h2>Open Source Projects</h2>
+            <h3 class="category-heading">Security Tools</h3>
+            <div class="project-grid">
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#3219a2,#20ff93)" aria-hidden="true"></div>
+                <h3>beacon-hunter</h3>
+                <p>Detects C2 beaconing patterns in netflow logs.</p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#3219a2">Python</li>
+                  <li class="skill" style="border-color:#e879f9">Zeek</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#ee5903,#f7df1e)" aria-hidden="true"></div>
+                <h3>phish-triage</h3>
+                <p>Slack bot that auto-triages reported phishing emails against threat intel feeds.</p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#3c873a">Node.js</li>
+                  <li class="skill" style="border-color:#61dafb">REST API</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#ff76d6,#a78bfa)" aria-hidden="true"></div>
+                <h3>ctf-writeups</h3>
+                <p>HackTheBox and TryHackMe writeups covering web, pwn, and forensics challenges.</p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#14b8a6">Markdown</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#20ff93,#8be9fd)" aria-hidden="true"></div>
+                <h3>iam-audit</h3>
+                <p>Script suite that flags over-privileged AWS IAM roles.</p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#3219a2">Python</li>
+                  <li class="skill" style="border-color:#ffb86c">boto3</li>
+                </ul>
+              </article>
             </div>
           </div>
         </section>
 
-        <section id="panel-certs" class="pane pane--certs" data-pane="certs">
+        <section id="panel-publications" class="pane pane--publications" data-pane="publications">
           <div class="pane__inner pane__inner--doc">
-            <h2>Certifications</h2>
-            <div class="code-pane">
-              <div class="code-line"><span class="ln">1</span><span class="code">{</span></div>
-              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;<span class="tok-key">"certifications"</span>: [</span></div>
-              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2025</span> },</span></div>
-              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2025</span> },</span></div>
-              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2024</span> },</span></div>
-              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2024</span> }</span></div>
-              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;]</span></div>
-              <div class="code-line"><span class="ln">8</span><span class="code">}</span></div>
+            <p class="eyebrow">Writeups</p>
+            <div class="pub-header">
+              <h2>Publications</h2>
+              <p class="pub-count">3 writeups</p>
             </div>
+            <p class="pub-intro">CTF writeups, security research notes, and anything else worth documenting. Replace with your own, or remove this section if it doesn't apply.</p>
+
+            <article class="pub-card">
+              <p class="eyebrow">CTF Writeup / 2025</p>
+              <h3>Breaking Down a Web Exploitation Challenge</h3>
+              <p class="pub-card__authors">Your Name</p>
+              <p class="pub-card__venue">HackTheBox</p>
+              <p>A walkthrough of a medium-difficulty web challenge: recon, an auth bypass, and privilege escalation to root.</p>
+              <a href="#">View writeup &#8599;</a>
+            </article>
+
+            <article class="pub-card">
+              <p class="eyebrow">Blog Post / 2025</p>
+              <h3>Tuning SIEM Alerts to Cut Analyst Fatigue</h3>
+              <p class="pub-card__authors">Your Name</p>
+              <p class="pub-card__venue">Personal blog</p>
+              <p>Notes on reworking correlation rules that cut false-positive SOC alerts by roughly a third.</p>
+              <a href="#">View writeup &#8599;</a>
+            </article>
+
+            <article class="pub-card">
+              <p class="eyebrow">Conference Talk / 2024</p>
+              <h3>Lessons From Your First Incident Response</h3>
+              <p class="pub-card__authors">Your Name</p>
+              <p class="pub-card__venue">Your Local Security Meetup</p>
+              <p>A short talk on what went well (and what didn't) during a real incident response engagement.</p>
+              <a href="#">View writeup &#8599;</a>
+            </article>
           </div>
         </section>
 
@@ -220,14 +283,27 @@
 
   <div class="statusbar">
     <div class="statusbar__left">
-      <span class="statusbar__item">&#8991; main</span>
-      <span class="statusbar__item">&#8855; 0</span>
-      <span class="statusbar__item">&#9888; 0</span>
+      <span class="statusbar__item">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M4 1.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6.4a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 3a.9.9 0 1 1 0 1.8A.9.9 0 0 1 4 3zm0 6.4a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8zM12 1.5a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 1.1a.9.9 0 1 1 0 1.8.9.9 0 0 1 0-1.8z"/><path d="M4.5 3.5V9M12 5V8a3 3 0 0 1-3 3H8"/></svg>
+        main
+      </span>
+      <span class="statusbar__item">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM7.5 4v5h1V4h-1zm0 6v1h1v-1h-1z"/></svg>
+        0
+      </span>
     </div>
     <div class="statusbar__right">
-      <a class="statusbar__item statusbar__link" href="https://www.linkedin.com/in/yourname/">LinkedIn</a>
-      <a class="statusbar__item statusbar__link" href="https://github.com/yourhandle">GitHub</a>
-      <span class="statusbar__item" aria-hidden="true">&#128276;</span>
+      <a class="statusbar__item statusbar__link" href="https://www.linkedin.com/in/yourname/">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        Linkedin
+      </a>
+      <a class="statusbar__item statusbar__link" href="https://github.com/yourhandle">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M12 1.5a10.5 10.5 0 0 0-3.32 20.47c.53.1.72-.23.72-.5v-1.95c-2.94.64-3.56-1.24-3.56-1.24-.48-1.22-1.17-1.55-1.17-1.55-.96-.65.07-.64.07-.64 1.06.08 1.62 1.09 1.62 1.09.94 1.61 2.46 1.14 3.06.88.1-.69.37-1.15.67-1.42-2.35-.27-4.82-1.17-4.82-5.22 0-1.15.41-2.09 1.08-2.83-.11-.27-.47-1.36.1-2.83 0 0 .88-.28 2.88 1.08a10 10 0 0 1 5.24 0c2-1.36 2.88-1.08 2.88-1.08.57 1.47.21 2.56.1 2.83.67.74 1.08 1.68 1.08 2.83 0 4.06-2.48 4.95-4.84 5.21.38.33.72.97.72 1.96v2.9c0 .27.19.61.73.5A10.5 10.5 0 0 0 12 1.5z"/></svg>
+        Github
+      </a>
+      <span class="statusbar__item" aria-hidden="true">
+        <svg viewBox="0 0 16 16" width="13" height="13" fill="currentColor"><path d="M8 1a3 3 0 0 0-3 3v1.1C3.9 5.7 3 7.1 3 8.7V11l-1 2h12l-1-2V8.7c0-1.6-.9-3-2-3.6V4a3 3 0 0 0-3-3zm-1.2 13.2a1.2 1.2 0 0 0 2.4 0h-2.4z"/></svg>
+      </span>
     </div>
   </div>
 </div>

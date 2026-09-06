@@ -23,15 +23,26 @@ portfolio.
 Each "file" is a `<section class="pane" data-pane="...">` in `index.html` —
 edit its content directly:
 
-- `home.jsx` → `#panel-home` — name, tagline, skill tags, avatar initials.
-- `about.html` → `#panel-about` — bio.
-- `contact.yml` → `#panel-contact` — email/LinkedIn/GitHub/location, styled
-  as YAML.
-- `projects.py` → `#panel-projects` — project cards (copy an existing
-  `<article class="project-card">` to add one).
-- `papers.json` → `#panel-certs` — certifications list.
+- `home.jsx` → `#panel-home` — name, tagline, skill tags (colored border per
+  skill, matching the reference), avatar initials.
+- `about.html` → `#panel-about` — bulleted facts (education/interests/role),
+  "Relevant Experience" and "Additional Experience" numbered lists.
+- `contact.yml` → `#panel-contact` — the one page styled as literal
+  line-numbered code (matching the reference exactly): plain-white keys,
+  purple linked values.
+- `projects.py` → `#panel-projects` — project cards with a thumbnail,
+  description, and tag pills (copy an existing `<article class="project-card">`
+  to add one).
+- `papers.json` → `#panel-publications` — "Publications": CTF writeups,
+  security research, or talks. Not every security engineer has these —
+  delete the section (and its sidebar/tab entries) if it doesn't apply to you.
 - `github.md` → `#panel-github` — a GitHub-profile-style card + repo grid.
 - `resume.pdf` → `#panel-resume` — download button + inline PDF preview.
+
+Only `contact.yml` is rendered as literal code — every other "file" is its
+own designed layout, matching how the reference site actually presents each
+one (verified against its live computed styles, not guessed from a
+screenshot).
 
 The sidebar file list and the tab bar are two separate copies of the same
 navigation (matching the real editor's layout) — if you rename a section,
