@@ -344,8 +344,8 @@ a:hover { text-decoration: underline; }
   overflow: hidden;
 }
 .project-card__thumb { height: 120px; }
-.project-card h3 { margin: 1rem 1.5rem 0.5rem; font-size: 1.05rem; color: var(--text-bright); }
-.project-card p { margin: 0 1.5rem 0.75rem; color: var(--text); font-size: 0.92rem; }
+.project-card h3 { margin: 1rem 1.5rem 0.5rem; font-size: 1.05rem; color: var(--text-bright); overflow-wrap: break-word; }
+.project-card p { margin: 0 1.5rem 0.75rem; color: var(--text); font-size: 0.92rem; overflow-wrap: break-word; }
 .tag-list { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 0 1.5rem 1.25rem; margin: 0; }
 
 /* ===== publications (papers.json) ===== */
@@ -359,7 +359,7 @@ a:hover { text-decoration: underline; }
   padding: 1.5rem;
   margin-bottom: 1.25rem;
 }
-.pub-card h3 { margin: 0 0 0.5rem; font-size: 1.2rem; color: var(--text-bright); }
+.pub-card h3 { margin: 0 0 0.5rem; font-size: 1.2rem; color: var(--text-bright); overflow-wrap: break-word; }
 .pub-card__authors { font-weight: 700; margin: 0 0 0.15rem; }
 .pub-card__venue { color: var(--accent); margin: 0 0 0.75rem; }
 
