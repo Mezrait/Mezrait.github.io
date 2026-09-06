@@ -50,9 +50,9 @@
         <a href="#panel-about" data-target="about" class="activitybar__icon" aria-label="Profile" title="Profile">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c1.3-4.2 4.2-6.3 7.5-6.3s6.2 2.1 7.5 6.3"/></svg>
         </a>
-        <span class="activitybar__icon activitybar__icon--static" aria-hidden="true">
+        <a href="#panel-settings" data-target="settings" class="activitybar__icon" aria-label="Settings" title="Settings">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2.4M12 18.1v2.4M20.5 12h-2.4M5.9 12H3.5M17.7 6.3l-1.7 1.7M8 16l-1.7 1.7M17.7 17.7 16 16M8 8 6.3 6.3"/></svg>
-        </span>
+        </a>
       </div>
     </nav>
 
@@ -276,6 +276,50 @@
           </div>
         </section>
 
+        <section id="panel-settings" class="pane pane--settings" data-pane="settings">
+          <div class="pane__inner pane__inner--doc pane__inner--wide">
+            <h2>Manage Themes</h2>
+            <div class="theme-grid">
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#282a36"><span style="background:#bd93f9"></span><span style="background:#50fa7b"></span><span style="background:#ff79c6"></span></div>
+                <p class="theme-card__name">Dracula</p>
+                <p class="theme-card__author">Dracula Theme</p>
+                <button type="button" class="button button--theme" data-theme-choice="dracula">Set Color Theme</button>
+              </article>
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#0d1117"><span style="background:#58a6ff"></span><span style="background:#3fb950"></span><span style="background:#f85149"></span></div>
+                <p class="theme-card__name">GitHub Dark</p>
+                <p class="theme-card__author">GitHub</p>
+                <button type="button" class="button button--theme" data-theme-choice="githubDark">Set Color Theme</button>
+              </article>
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#0b0e14"><span style="background:#ffb454"></span><span style="background:#91b362"></span><span style="background:#f07178"></span></div>
+                <p class="theme-card__name">Ayu Dark</p>
+                <p class="theme-card__author">teabyii</p>
+                <button type="button" class="button button--theme" data-theme-choice="ayuDark">Set Color Theme</button>
+              </article>
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#1f2430"><span style="background:#ffcc66"></span><span style="background:#bae67e"></span><span style="background:#f28779"></span></div>
+                <p class="theme-card__name">Ayu Mirage</p>
+                <p class="theme-card__author">teabyii</p>
+                <button type="button" class="button button--theme" data-theme-choice="ayuMirage">Set Color Theme</button>
+              </article>
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#2e3440"><span style="background:#88c0d0"></span><span style="background:#a3be8c"></span><span style="background:#bf616a"></span></div>
+                <p class="theme-card__name">Nord</p>
+                <p class="theme-card__author">arcticicestudio</p>
+                <button type="button" class="button button--theme" data-theme-choice="nord">Set Color Theme</button>
+              </article>
+              <article class="theme-card">
+                <div class="theme-swatch" style="background:#011627"><span style="background:#82aaff"></span><span style="background:#addb67"></span><span style="background:#c792ea"></span></div>
+                <p class="theme-card__name">Night Owl</p>
+                <p class="theme-card__author">sarah.drasner</p>
+                <button type="button" class="button button--theme" data-theme-choice="nightOwl">Set Color Theme</button>
+              </article>
+            </div>
+          </div>
+        </section>
+
       </div>
     </div>
   </div>
@@ -307,6 +351,7 @@
   </div>
 </div>
 
+<script src="js/theme.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

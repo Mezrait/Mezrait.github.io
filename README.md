@@ -16,6 +16,10 @@ portfolio.
   the link. **Progressive enhancement**: without JavaScript, every pane
   simply stacks into one normal scrolling page — the site is never blank or
   broken if a script fails to load.
+- `js/theme.js` — the "Manage Themes" picker (gear icon in the activity bar,
+  `#panel-settings`, not listed in the sidebar/tabs — matching the reference).
+  Swaps the site's CSS custom properties between six built-in themes and
+  remembers the choice in `localStorage`.
 - `assets/resume.pdf` — **placeholder**, replace with a real resume.
 
 ## Editing content
@@ -37,7 +41,17 @@ edit its content directly:
   security research, or talks. Not every security engineer has these —
   delete the section (and its sidebar/tab entries) if it doesn't apply to you.
 - `github.md` → `#panel-github` — a GitHub-profile-style card + repo grid.
-- `resume.pdf` → `#panel-resume` — download button + inline PDF preview.
+- `resume.pdf` → `#panel-resume` — viewable inline via the browser's native
+  PDF viewer, with a small "Open in new tab" fallback link (no forced
+  download).
+
+## Themes
+
+Click the gear icon at the bottom of the activity bar (or go to
+`#panel-settings`) to switch between six built-in color themes: Dracula
+(default), GitHub Dark, Ayu Dark, Ayu Mirage, Nord, and Night Owl. Add a new
+one by adding an entry to the `THEMES` object in `js/theme.js` and a matching
+card in the `#panel-settings` section of `index.html`.
 
 Only `contact.yml` is rendered as literal code — every other "file" is its
 own designed layout, matching how the reference site actually presents each
