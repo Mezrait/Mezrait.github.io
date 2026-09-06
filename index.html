@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Your Name — Cybersecurity Engineer</title>
-<meta name="description" content="Portfolio of Your Name, a cybersecurity engineer — bio, projects, certifications, and contact info.">
+<meta name="description" content="Portfolio of Your Name, a cybersecurity engineer — experience, projects, certifications, and contact info.">
 <meta property="og:title" content="Your Name — Cybersecurity Engineer">
-<meta property="og:description" content="Portfolio of Your Name, a cybersecurity engineer — bio, projects, certifications, and contact info.">
+<meta property="og:description" content="Portfolio of Your Name, a cybersecurity engineer — experience, projects, certifications, and contact info.">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:,">
@@ -16,95 +15,108 @@
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <section class="terminal" id="terminal" aria-label="Interactive recon terminal (optional -- full content is also available below)">
-    <div class="terminal__titlebar">
-      <div class="terminal__dots" aria-hidden="true"><span></span><span></span><span></span></div>
-      <div class="terminal__title" aria-hidden="true">guest@target — recon session</div>
-      <nav class="terminal__nav" aria-label="Quick sections">
-        <button type="button" data-cmd="whoami">About</button>
-        <button type="button" data-cmd="ls projects/">Projects</button>
-        <button type="button" data-cmd="cat certs.log">Certs</button>
-        <button type="button" data-cmd="contact">Contact</button>
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="site-header__name" href="#main-content">Your Name</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certs">Certifications</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
-    <div class="terminal__output" id="terminalOutput" role="log" aria-live="polite"></div>
-    <form class="terminal__inputline" id="terminalForm">
-      <label class="terminal__prompt" for="terminalInput">guest@target:~$</label>
-      <input id="terminalInput" class="terminal__input" type="text" autocomplete="off" spellcheck="false" placeholder="type a command… try 'help'" disabled>
-    </form>
-  </section>
+  </header>
 
   <main id="main-content">
-    <section id="about">
-      <h1 data-field="name">Your Name</h1>
-      <p data-field="role">Cybersecurity Engineer</p>
-      <p data-field="bio">Blue team by day, breaks things by night. Focused on detection engineering, incident response, and making SOC alerts less noisy.</p>
-      <h2>Skills</h2>
-      <ul data-field="skills">
-        <li>SIEM (Splunk/Sentinel)</li>
-        <li>Python</li>
-        <li>Network forensics</li>
-        <li>Threat hunting</li>
-        <li>AWS security</li>
-        <li>Linux internals</li>
-      </ul>
+    <section class="hero" id="about">
+      <div class="wrap">
+        <p class="eyebrow">Cybersecurity Engineer</p>
+        <h1>Your Name</h1>
+        <p class="hero__bio">
+          Replace this with two or three real sentences: your focus area (e.g. detection
+          engineering, incident response, offensive security), a couple of years of
+          experience or standout achievements, and what kind of role you're looking for.
+        </p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="assets/resume.pdf">Download Resume</a>
+          <a class="button" href="#contact">Contact Me</a>
+        </div>
+        <ul class="skills">
+          <li>SIEM (Splunk/Sentinel)</li>
+          <li>Python</li>
+          <li>Network Forensics</li>
+          <li>Threat Hunting</li>
+          <li>AWS Security</li>
+          <li>Linux</li>
+        </ul>
+      </div>
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="project-grid">
+          <article class="project-card">
+            <h3>Project Name</h3>
+            <p>One or two sentences on what it does and the problem it solves.</p>
+            <p class="project-card__stack">Python, Zeek</p>
+            <a href="#">View project &rarr;</a>
+          </article>
 
-      <article id="project-beacon-hunter" data-project-id="beacon-hunter" data-project-name="beacon-hunter/" data-project-status="active">
-        <h3>beacon-hunter/</h3>
-        <p data-field="description">Detects C2 beaconing patterns in netflow logs.</p>
-        <p data-field="stack">Python, Zeek</p>
-        <a data-field="link" href="#">repo</a>
-      </article>
+          <article class="project-card">
+            <h3>Project Name</h3>
+            <p>One or two sentences on what it does and the problem it solves.</p>
+            <p class="project-card__stack">Node.js, REST API</p>
+            <a href="#">View project &rarr;</a>
+          </article>
 
-      <article id="project-phish-triage" data-project-id="phish-triage" data-project-name="phish-triage/" data-project-status="active">
-        <h3>phish-triage/</h3>
-        <p data-field="description">Slack bot that auto-triages reported phishing emails against threat intel feeds.</p>
-        <p data-field="stack">Node.js, VirusTotal API</p>
-        <a data-field="link" href="#">repo</a>
-      </article>
+          <article class="project-card">
+            <h3>Project Name</h3>
+            <p>One or two sentences on what it does and the problem it solves.</p>
+            <p class="project-card__stack">Markdown</p>
+            <a href="#">View project &rarr;</a>
+          </article>
 
-      <article id="project-ctf-writeups" data-project-id="ctf-writeups" data-project-name="ctf-writeups/" data-project-status="active">
-        <h3>ctf-writeups/</h3>
-        <p data-field="description">HackTheBox and TryHackMe writeups covering web, pwn, and forensics challenges.</p>
-        <p data-field="stack">Markdown</p>
-        <a data-field="link" href="#">repo</a>
-      </article>
-
-      <article id="project-iam-audit" data-project-id="iam-audit" data-project-name="iam-audit/" data-project-status="active">
-        <h3>iam-audit/</h3>
-        <p data-field="description">Script suite that flags over-privileged AWS IAM roles.</p>
-        <p data-field="stack">Python, boto3</p>
-        <a data-field="link" href="#">repo</a>
-      </article>
+          <article class="project-card">
+            <h3>Project Name</h3>
+            <p>One or two sentences on what it does and the problem it solves.</p>
+            <p class="project-card__stack">Python, boto3</p>
+            <a href="#">View project &rarr;</a>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="certs">
-      <h2>Certifications</h2>
-      <ul>
-        <li data-cert="CompTIA Security+" data-cert-date="2025-11" data-cert-status="ACTIVE">CompTIA Security+ — active (2025-11)</li>
-        <li data-cert="CEH Practical" data-cert-date="2025-06" data-cert-status="ACTIVE">CEH Practical — active (2025-06)</li>
-        <li data-cert="TryHackMe" data-cert-date="2024-09" data-cert-status="VERIFIED">TryHackMe — Top 2% global (2024-09)</li>
-        <li data-cert="HackTheBox" data-cert-date="2024-02" data-cert-status="VERIFIED">HackTheBox — Pro Hacker rank (2024-02)</li>
-      </ul>
+      <div class="wrap">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+          <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2025</span></li>
+          <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2025</span></li>
+          <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2024</span></li>
+          <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2024</span></li>
+        </ul>
+      </div>
     </section>
 
     <section id="contact">
-      <h2>Contact</h2>
-      <ul>
-        <li><a data-contact="resume" href="assets/resume.pdf">Download resume (PDF)</a></li>
-        <li><a data-contact="email" href="mailto:you@example.com">you@example.com</a></li>
-        <li><a data-contact="linkedin" href="https://www.linkedin.com/in/yourname/">LinkedIn</a></li>
-        <li><a data-contact="github" href="https://github.com/yourhandle">GitHub</a></li>
-      </ul>
+      <div class="wrap">
+        <h2>Contact</h2>
+        <p>The best ways to reach me:</p>
+        <ul class="contact-list">
+          <li><a href="mailto:you@example.com">you@example.com</a></li>
+          <li><a href="https://www.linkedin.com/in/yourname/">LinkedIn</a></li>
+          <li><a href="https://github.com/yourhandle">GitHub</a></li>
+          <li><a href="assets/resume.pdf">Resume (PDF)</a></li>
+        </ul>
+      </div>
     </section>
   </main>
 
-  <script src="js/commands.js"></script>
-  <script src="js/content.js"></script>
-  <script src="js/terminal.js"></script>
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Your Name</p>
+    </div>
+  </footer>
 </body>
 </html>
