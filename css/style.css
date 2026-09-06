@@ -313,7 +313,9 @@ a:hover { text-decoration: underline; }
   font-size: 3rem;
   font-weight: 700;
   color: var(--accent);
+  overflow: hidden;
 }
+.home__avatar img { width: 100%; height: 100%; object-fit: cover; }
 
 .button {
   display: inline-block;
@@ -368,7 +370,9 @@ a:hover { text-decoration: underline; }
   background: var(--bg-raised); border: 2px solid var(--accent);
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; color: var(--accent);
+  overflow: hidden;
 }
+.github-card__avatar img { width: 100%; height: 100%; object-fit: cover; }
 .github-card__user { font-weight: 700; color: var(--text-bright); margin: 0; }
 .github-card__stats { color: var(--text-dim); margin: 0.15rem 0 0; font-size: 0.85rem; }
 
