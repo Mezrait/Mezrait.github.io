@@ -18,10 +18,10 @@
 
 <div class="app">
   <div class="app__titlebar">
-    <span class="dot dot--red" aria-hidden="true"></span>
-    <span class="dot dot--yellow" aria-hidden="true"></span>
-    <span class="dot dot--green" aria-hidden="true"></span>
-    <span class="app__title">Your Name — Portfolio</span>
+    <nav class="app__menu" aria-hidden="true">
+      <span>File</span><span>Edit</span><span>View</span><span>Go</span><span>Run</span><span>Terminal</span><span>Help</span>
+    </nav>
+    <span class="app__title">Your Name - Portfolio</span>
   </div>
 
   <div class="app__body">
@@ -47,25 +47,25 @@
       <p class="explorer__heading">Explorer</p>
       <p class="explorer__folder">&#9662; PORTFOLIO</p>
       <ul class="explorer__files">
-        <li><a href="#panel-home" data-target="home" class="file-item is-active"><span class="file-badge file-badge--jsx">JS</span>home.jsx</a></li>
-        <li><a href="#panel-about" data-target="about" class="file-item"><span class="file-badge file-badge--html">&lt;&gt;</span>about.html</a></li>
-        <li><a href="#panel-contact" data-target="contact" class="file-item"><span class="file-badge file-badge--yml">YML</span>contact.yml</a></li>
-        <li><a href="#panel-projects" data-target="projects" class="file-item"><span class="file-badge file-badge--py">PY</span>projects.py</a></li>
-        <li><a href="#panel-certs" data-target="certs" class="file-item"><span class="file-badge file-badge--json">{ }</span>papers.json</a></li>
-        <li><a href="#panel-github" data-target="github" class="file-item"><span class="file-badge file-badge--md">M&darr;</span>github.md</a></li>
-        <li><a href="#panel-resume" data-target="resume" class="file-item"><span class="file-badge file-badge--pdf">PDF</span>resume.pdf</a></li>
+        <li><a href="#panel-home" data-target="home" class="file-item is-active"><span class="file-glyph" style="color:#61dafb"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a></li>
+        <li><a href="#panel-about" data-target="about" class="file-item"><span class="file-glyph" style="color:#e6743a"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a></li>
+        <li><a href="#panel-contact" data-target="contact" class="file-item"><span class="file-chip file-chip--yml">YML</span>contact.yml</a></li>
+        <li><a href="#panel-projects" data-target="projects" class="file-item"><span class="file-glyph"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.2c-3.7 0-3.9 1.6-3.9 1.6l.01 1.7h3.95v.6H6.8s-2.9-.3-2.9 4.2 2.5 4.3 2.5 4.3h1.5v-1.9s-.1-2.5 2.5-2.5h3.5s2.3.03 2.3-2.2V4.6s.35-2.4-4.2-2.4z" fill="#4B8BBE"/><path d="M12 21.8c3.7 0 3.9-1.6 3.9-1.6l-.01-1.7H11.9v-.6h5.3s2.9.3 2.9-4.2-2.5-4.3-2.5-4.3h-1.5v1.9s.1 2.5-2.5 2.5H9.9s-2.3-.03-2.3 2.2v3.8s-.35 2.4 4.2 2.4z" fill="#FFD43B"/></svg></span>projects.py</a></li>
+        <li><a href="#panel-certs" data-target="certs" class="file-item"><span class="file-chip file-chip--json">{ }</span>papers.json</a></li>
+        <li><a href="#panel-github" data-target="github" class="file-item"><span class="file-glyph file-glyph--text" style="color:#c792ea">M&darr;</span>github.md</a></li>
+        <li><a href="#panel-resume" data-target="resume" class="file-item"><span class="file-glyph" style="color:#b085f5"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a></li>
       </ul>
     </aside>
 
     <div class="editor">
       <div class="tabbar">
-        <a href="#panel-home" data-target="home" class="tab is-active"><span class="file-badge file-badge--jsx">JS</span>home.jsx</a>
-        <a href="#panel-about" data-target="about" class="tab"><span class="file-badge file-badge--html">&lt;&gt;</span>about.html</a>
-        <a href="#panel-contact" data-target="contact" class="tab"><span class="file-badge file-badge--yml">YML</span>contact.yml</a>
-        <a href="#panel-projects" data-target="projects" class="tab"><span class="file-badge file-badge--py">PY</span>projects.py</a>
-        <a href="#panel-certs" data-target="certs" class="tab"><span class="file-badge file-badge--json">{ }</span>papers.json</a>
-        <a href="#panel-github" data-target="github" class="tab"><span class="file-badge file-badge--md">M&darr;</span>github.md</a>
-        <a href="#panel-resume" data-target="resume" class="tab"><span class="file-badge file-badge--pdf">PDF</span>resume.pdf</a>
+        <a href="#panel-home" data-target="home" class="tab is-active"><span class="file-glyph" style="color:#61dafb"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="12" rx="9" ry="3.3"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.3" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></span>home.jsx</a>
+        <a href="#panel-about" data-target="about" class="tab"><span class="file-glyph" style="color:#e6743a"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M5 3h14l-1.3 15.2L12 21l-5.7-2.8L5 3z"/></svg></span>about.html</a>
+        <a href="#panel-contact" data-target="contact" class="tab"><span class="file-chip file-chip--yml">YML</span>contact.yml</a>
+        <a href="#panel-projects" data-target="projects" class="tab"><span class="file-glyph"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2.2c-3.7 0-3.9 1.6-3.9 1.6l.01 1.7h3.95v.6H6.8s-2.9-.3-2.9 4.2 2.5 4.3 2.5 4.3h1.5v-1.9s-.1-2.5 2.5-2.5h3.5s2.3.03 2.3-2.2V4.6s.35-2.4-4.2-2.4z" fill="#4B8BBE"/><path d="M12 21.8c3.7 0 3.9-1.6 3.9-1.6l-.01-1.7H11.9v-.6h5.3s2.9.3 2.9-4.2-2.5-4.3-2.5-4.3h-1.5v1.9s.1 2.5-2.5 2.5H9.9s-2.3-.03-2.3 2.2v3.8s-.35 2.4 4.2 2.4z" fill="#FFD43B"/></svg></span>projects.py</a>
+        <a href="#panel-certs" data-target="certs" class="tab"><span class="file-chip file-chip--json">{ }</span>papers.json</a>
+        <a href="#panel-github" data-target="github" class="tab"><span class="file-glyph file-glyph--text" style="color:#c792ea">M&darr;</span>github.md</a>
+        <a href="#panel-resume" data-target="resume" class="tab"><span class="file-glyph" style="color:#b085f5"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg></span>resume.pdf</a>
       </div>
 
       <div class="editor__panes" id="editor-content">
@@ -102,62 +102,58 @@
 
         <section id="panel-about" class="pane pane--about" data-pane="about">
           <div class="pane__inner pane__inner--doc">
-            <p class="tag-hint">&lt;h1&gt;</p>
             <h2>About Me</h2>
-            <p class="tag-hint">&lt;/h1&gt;</p>
-            <p>
-              Replace this with two or three real sentences: your focus area (e.g.
-              detection engineering, incident response, offensive security), a couple
-              of years of experience or standout achievements, and what kind of role
-              you're looking for.
-            </p>
-            <p>
-              Add a second paragraph here if you want to cover education, how you got
-              into security, or what you're currently learning.
-            </p>
+            <div class="code-pane">
+              <div class="code-line"><span class="ln">1</span><span class="code"><span class="tok-punc">&lt;</span><span class="tok-tag">section</span> <span class="tok-attr">id</span>=<span class="tok-str">"about"</span><span class="tok-punc">&gt;</span></span></div>
+              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;</span><span class="tok-tag">h1</span><span class="tok-punc">&gt;</span>Your Name<span class="tok-punc">&lt;/</span><span class="tok-tag">h1</span><span class="tok-punc">&gt;</span></span></div>
+              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;</span><span class="tok-tag">p</span><span class="tok-punc">&gt;</span></span></div>
+              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;Replace this with two or three real sentences: your focus area</span></div>
+              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;(e.g. detection engineering, incident response, offensive</span></div>
+              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;security), a couple of years of experience or standout</span></div>
+              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;achievements, and what kind of role you're looking for.</span></div>
+              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;<span class="tok-punc">&lt;/</span><span class="tok-tag">p</span><span class="tok-punc">&gt;</span></span></div>
+              <div class="code-line"><span class="ln">9</span><span class="code"><span class="tok-punc">&lt;/</span><span class="tok-tag">section</span><span class="tok-punc">&gt;</span></span></div>
+            </div>
           </div>
         </section>
 
         <section id="panel-contact" class="pane pane--contact" data-pane="contact">
           <div class="pane__inner pane__inner--doc">
-            <h2>Contact</h2>
-            <pre class="yaml"><code><span class="yaml__key">name</span>: <span class="yaml__value">Your Name</span>
-<span class="yaml__key">role</span>: <span class="yaml__value">Cybersecurity Engineer</span>
-<span class="yaml__key">email</span>: <span class="yaml__value"><a href="mailto:you@example.com">you@example.com</a></span>
-<span class="yaml__key">linkedin</span>: <span class="yaml__value"><a href="https://www.linkedin.com/in/yourname/">linkedin.com/in/yourname</a></span>
-<span class="yaml__key">github</span>: <span class="yaml__value"><a href="https://github.com/yourhandle">github.com/yourhandle</a></span>
-<span class="yaml__key">location</span>: <span class="yaml__value">City, Country</span></code></pre>
+            <h2>Find Me On</h2>
+            <div class="code-pane">
+              <div class="code-line"><span class="ln">1</span><span class="code"><span class="tok-key">tag</span><span class="tok-punc">:</span> <span class="tok-str">production</span></span></div>
+              <div class="code-line"><span class="ln">2</span><span class="code"><span class="tok-key">YourName</span><span class="tok-punc">:</span></span></div>
+              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-punc">-</span> <span class="tok-key">contact</span><span class="tok-punc">:</span></span></div>
+              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">email</span><span class="tok-punc">:</span> <a class="tok-str" href="mailto:you@example.com">you@example.com</a></span></div>
+              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">phone</span><span class="tok-punc">:</span> <span class="tok-num">null</span></span></div>
+              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">linkedin</span><span class="tok-punc">:</span> <a class="tok-str" href="https://www.linkedin.com/in/yourname/">linkedin.com/in/yourname</a></span></div>
+              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">github</span><span class="tok-punc">:</span> <a class="tok-str" href="https://github.com/yourhandle">github.com/yourhandle</a></span></div>
+              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">location</span><span class="tok-punc">:</span> <span class="tok-str">City, Country</span></span></div>
+            </div>
           </div>
         </section>
 
         <section id="panel-projects" class="pane pane--projects" data-pane="projects">
           <div class="pane__inner pane__inner--doc">
             <h2>Projects</h2>
-            <div class="project-grid">
-              <article class="project-card">
-                <h3>Project Name</h3>
-                <p>One or two sentences on what it does and the problem it solves.</p>
-                <p class="project-card__stack">Python, Zeek</p>
-                <a href="#">View project &rarr;</a>
-              </article>
-              <article class="project-card">
-                <h3>Project Name</h3>
-                <p>One or two sentences on what it does and the problem it solves.</p>
-                <p class="project-card__stack">Node.js, REST API</p>
-                <a href="#">View project &rarr;</a>
-              </article>
-              <article class="project-card">
-                <h3>Project Name</h3>
-                <p>One or two sentences on what it does and the problem it solves.</p>
-                <p class="project-card__stack">Markdown</p>
-                <a href="#">View project &rarr;</a>
-              </article>
-              <article class="project-card">
-                <h3>Project Name</h3>
-                <p>One or two sentences on what it does and the problem it solves.</p>
-                <p class="project-card__stack">Python, boto3</p>
-                <a href="#">View project &rarr;</a>
-              </article>
+            <div class="code-pane">
+              <div class="code-line"><span class="ln">1</span><span class="code">projects = [</span></div>
+              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
+              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
+              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
+              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Python"</span>, <span class="tok-str">"Zeek"</span>],</span></div>
+              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
+              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
+              <div class="code-line"><span class="ln">8</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
+              <div class="code-line"><span class="ln">9</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
+              <div class="code-line"><span class="ln">10</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Node.js"</span>, <span class="tok-str">"REST API"</span>],</span></div>
+              <div class="code-line"><span class="ln">11</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
+              <div class="code-line"><span class="ln">12</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{</span></div>
+              <div class="code-line"><span class="ln">13</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"name"</span>: <span class="tok-str">"Project Name"</span>,</span></div>
+              <div class="code-line"><span class="ln">14</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"description"</span>: <span class="tok-str">"One or two sentences on what it does."</span>,</span></div>
+              <div class="code-line"><span class="ln">15</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tok-key">"stack"</span>: [<span class="tok-str">"Python"</span>, <span class="tok-str">"boto3"</span>],</span></div>
+              <div class="code-line"><span class="ln">16</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;},</span></div>
+              <div class="code-line"><span class="ln">17</span><span class="code">]</span></div>
             </div>
           </div>
         </section>
@@ -165,12 +161,16 @@
         <section id="panel-certs" class="pane pane--certs" data-pane="certs">
           <div class="pane__inner pane__inner--doc">
             <h2>Certifications</h2>
-            <ul class="cert-list">
-              <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2025</span></li>
-              <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2025</span></li>
-              <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2024</span></li>
-              <li><span class="cert-list__name">Certification Name</span><span class="cert-list__meta">2024</span></li>
-            </ul>
+            <div class="code-pane">
+              <div class="code-line"><span class="ln">1</span><span class="code">{</span></div>
+              <div class="code-line"><span class="ln">2</span><span class="code">&nbsp;&nbsp;<span class="tok-key">"certifications"</span>: [</span></div>
+              <div class="code-line"><span class="ln">3</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2025</span> },</span></div>
+              <div class="code-line"><span class="ln">4</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2025</span> },</span></div>
+              <div class="code-line"><span class="ln">5</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2024</span> },</span></div>
+              <div class="code-line"><span class="ln">6</span><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="tok-key">"name"</span>: <span class="tok-str">"Certification Name"</span>, <span class="tok-key">"year"</span>: <span class="tok-num">2024</span> }</span></div>
+              <div class="code-line"><span class="ln">7</span><span class="code">&nbsp;&nbsp;]</span></div>
+              <div class="code-line"><span class="ln">8</span><span class="code">}</span></div>
+            </div>
           </div>
         </section>
 

@@ -57,20 +57,22 @@ a:hover { text-decoration: underline; }
 .app__titlebar {
   display: flex;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  gap: 1rem;
   background: var(--bg-title);
   padding: 0.5rem 0.9rem;
   border-bottom: 1px solid var(--border);
   flex-shrink: 0;
+  flex-wrap: wrap;
 }
-.dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-.dot--red { background: #ff5f57; }
-.dot--yellow { background: #febc2e; }
-.dot--green { background: #28c840; }
+.app__menu {
+  display: flex;
+  gap: 1.1rem;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
 .app__title {
-  flex: 1;
-  text-align: center;
-  font-size: 0.78rem;
+  font-size: 0.8rem;
   color: var(--text-dim);
 }
 
@@ -141,8 +143,17 @@ a:hover { text-decoration: underline; }
 .file-item:hover { background: var(--bg-raised); text-decoration: none; }
 .file-item.is-active { background: var(--bg-raised); border-left-color: var(--accent); color: var(--text-bright); }
 
-/* ===== file type badges (shared: sidebar + tabs) ===== */
-.file-badge {
+/* ===== file type icons (shared: sidebar + tabs) ===== */
+.file-glyph {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.file-glyph--text { font-size: 0.72rem; font-weight: 700; font-family: ui-monospace, Consolas, monospace; }
+.file-chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -150,18 +161,13 @@ a:hover { text-decoration: underline; }
   height: 18px;
   padding: 0 3px;
   border-radius: 4px;
-  font-size: 0.62rem;
+  font-size: 0.6rem;
   font-weight: 700;
   font-family: ui-monospace, Consolas, monospace;
   flex-shrink: 0;
 }
-.file-badge--jsx { background: #2b3a67; color: #7fb2ff; }
-.file-badge--html { background: #5a2a1f; color: #ff8a65; }
-.file-badge--yml { background: #4a3a12; color: #ffcb6b; }
-.file-badge--py { background: #123a2e; color: #4fd1a5; }
-.file-badge--json { background: #3a3212; color: #ffe066; }
-.file-badge--md { background: #33244f; color: #c792ea; }
-.file-badge--pdf { background: #4a1720; color: #ff6b81; }
+.file-chip--yml { background: #4a1f24; color: #ff8a94; }
+.file-chip--json { background: #3a3212; color: #ffe066; }
 
 /* ===== editor + tabs ===== */
 .editor {
@@ -213,7 +219,35 @@ a:hover { text-decoration: underline; }
 .pane__inner { padding: 3rem 2.5rem; max-width: 900px; }
 .pane__inner--doc h2 { font-size: 1.5rem; margin: 0 0 1.25rem; color: var(--text-bright); }
 .pane__inner--doc p { color: var(--text); }
-.tag-hint { color: var(--text-dim); font-family: ui-monospace, Consolas, monospace; font-size: 0.8rem; margin: 0 0 0.25rem; }
+
+/* ===== code pane (about.html / contact.yml / projects.py / papers.json) ===== */
+.code-pane {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem 0;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 0.85rem;
+  overflow-x: auto;
+}
+.code-line { display: flex; }
+.code-line .ln {
+  width: 2.75rem;
+  flex-shrink: 0;
+  text-align: right;
+  padding-right: 1.1rem;
+  color: var(--text-dim);
+  opacity: 0.6;
+  user-select: none;
+}
+.code-line .code { color: var(--text); white-space: pre; padding-right: 1.5rem; }
+.code-line .code a { color: inherit; }
+.tok-tag { color: #ff8a94; }
+.tok-attr { color: #7fb2ff; }
+.tok-key { color: #c792ea; }
+.tok-str { color: #98d8a1; }
+.tok-num { color: #ffcb6b; }
+.tok-punc { color: var(--text-dim); }
 
 /* ===== home pane ===== */
 .pane--home { position: relative; overflow: hidden; }
@@ -280,20 +314,6 @@ a:hover { text-decoration: underline; }
 .button--outline { border: 1px solid var(--accent); color: var(--accent); }
 .button--outline:hover { background: rgba(167,139,250,0.1); text-decoration: none; }
 
-/* ===== contact / yaml ===== */
-.yaml {
-  background: var(--bg-raised);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.25rem 1.5rem;
-  font-family: ui-monospace, Consolas, monospace;
-  font-size: 0.9rem;
-  overflow-x: auto;
-}
-.yaml__key { color: #7fb2ff; }
-.yaml__value { color: #4fd1a5; }
-.yaml a { color: inherit; }
-
 /* ===== projects / github cards ===== */
 .project-grid {
   display: grid;
@@ -309,7 +329,6 @@ a:hover { text-decoration: underline; }
 }
 .project-card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; color: var(--accent); }
 .project-card p { margin: 0 0 0.75rem; color: var(--text-dim); font-size: 0.92rem; }
-.project-card__stack { font-size: 0.78rem !important; }
 
 .github-card { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
 .github-card__avatar {
@@ -320,12 +339,6 @@ a:hover { text-decoration: underline; }
 }
 .github-card__user { font-weight: 700; color: var(--text-bright); margin: 0; }
 .github-card__stats { color: var(--text-dim); margin: 0.15rem 0 0; font-size: 0.85rem; }
-
-/* ===== certifications ===== */
-.cert-list { list-style: none; padding: 0; margin: 1rem 0 0; border-top: 1px solid var(--border); }
-.cert-list li { display: flex; justify-content: space-between; padding: 0.85rem 0; border-bottom: 1px solid var(--border); }
-.cert-list__name { font-weight: 600; color: var(--text-bright); }
-.cert-list__meta { color: var(--text-dim); }
 
 /* ===== resume ===== */
 .resume-embed { width: 100%; height: 640px; border: 1px solid var(--border); border-radius: 8px; margin-top: 1rem; }
