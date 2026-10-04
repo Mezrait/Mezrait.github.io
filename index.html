@@ -87,19 +87,22 @@
           <div class="pane__inner">
             <div class="home__text">
               <h1 class="home__name">Mezrait Menber</h1>
-              <p class="home__tagline"><span id="typewriter">Cybersecurity Engineering Student | Cryptography &amp; Applied Security</span><span class="caret" aria-hidden="true">|</span></p>
+              <p class="home__tagline"><span id="typewriter">Cybersecurity Engineering Student | Cryptographic Analysis &amp; Systems Security</span><span class="caret" aria-hidden="true">|</span></p>
               <p class="label">Skill Set</p>
               <ul class="skills">
                 <li class="skill" style="border-color:#3219a2">Block-Cipher-Design</li>
-                <li class="skill" style="border-color:#20ff93">Cryptanalysis-(MILP)</li>
+                <li class="skill" style="border-color:#20ff93">MILP-Cryptanalysis</li>
+                <li class="skill" style="border-color:#e879f9">SAC/NIST-SP-800-22</li>
                 <li class="skill" style="border-color:#f7df1e">Java</li>
                 <li class="skill" style="border-color:#61dafb">Python</li>
-                <li class="skill" style="border-color:#e879f9">NIST-SP-800-22</li>
-                <li class="skill" style="border-color:#14b8a6">Digital-Forensics</li>
+                <li class="skill" style="border-color:#2563eb">TypeScript</li>
                 <li class="skill" style="border-color:#ef7171">Linux</li>
-                <li class="skill" style="border-color:#3c873a">Git/GitHub</li>
+                <li class="skill" style="border-color:#009485">FastAPI</li>
+                <li class="skill" style="border-color:#336791">PostgreSQL</li>
+                <li class="skill" style="border-color:#2496ed">Docker</li>
+                <li class="skill" style="border-color:#a78bfa">MCP</li>
                 <li class="skill" style="border-color:#ee5903">Knowledge-Graph-RAG</li>
-                <li class="skill" style="border-color:#a78bfa">Threat-Intelligence</li>
+                <li class="skill" style="border-color:#3c873a">Git/GitHub</li>
                 <li class="skill" style="border-color:#e8ff76">Automated-Testing</li>
               </ul>
               <div class="home__actions">
@@ -118,13 +121,13 @@
             <h2>About Me</h2>
             <ul class="fact-list">
               <li><span class="fact-emoji" aria-hidden="true">&#128214;</span> B.Sc. Cybersecurity Engineering at <a href="https://www.adu.ac.ae" target="_blank" rel="noopener">Abu Dhabi University</a> [Sep 2023 &ndash; Jun 2027 (expected)] &mdash; Dean&#39;s List five consecutive semesters, full UAE Government scholarship</li>
-              <li><span class="fact-emoji" aria-hidden="true">&#128737;&#65039;</span> Interests: Symmetric Cryptography, Cipher Design &amp; Cryptanalysis, AI-Driven Security Systems, Digital Forensics.</li>
+              <li><span class="fact-emoji" aria-hidden="true">&#128737;&#65039;</span> Interests: verifying security claims under deployment conditions; cryptographic analysis and empirical measurement; systems security.</li>
               <li><span class="fact-emoji" aria-hidden="true">&#128187;</span> <span class="highlight-role">Co-author of AEX-128</span>, a key-dependent SPN&ndash;ARX block cipher published in <a href="https://doi.org/10.1109/ACCESS.2026.3730739" target="_blank" rel="noopener">IEEE Access (2026)</a>; applying for thesis-based MSc programs (Fall 2027).</li>
             </ul>
 
             <h3>Relevant Experience</h3>
             <ol class="fact-list fact-list--numbered">
-              <li><a href="#">Python Developer Intern</a> at <a href="#">Ansen Technology Co. Ltd.</a>: built the agent skill-rating lifecycle and &ldquo;Playbook Keeper&rdquo; review interface for the eThreats threat-intelligence platform; traced and fixed the root cause of 94.1% of failed agent tool calls via a live controlled experiment; migrated retrieval to knowledge-graph-enhanced LightRAG, raising answer faithfulness from 86.7% to 100%. [Jun 2026 &ndash; Aug 2026, Abu Dhabi]</li>
+              <li><a href="https://ansen.ai" target="_blank" rel="noopener">Python Developer Intern</a> at <a href="https://ansen.ai" target="_blank" rel="noopener">Ansen Technology Co. Ltd.</a> on the eThreats multi-agent AI threat-intelligence platform: replaced the document-retrieval pipeline with a knowledge-graph backend (LightRAG + Apache AGE) behind an adapter layer with shadow ingest, raising answer faithfulness from 86.7% to 100% on a 15-query golden set; traced 94.1% of raw tool-call failures in a live skill-on/off experiment to a single namespace mismatch and fixed it; widened the MCP gateway cache from per-task to per-run scope, eliminating redundant lookups in 294 of 385 historical runs; built the Skill Reviewer surface for the agent skill-rating lifecycle. [29 Jun &ndash; 24 Aug 2026, Abu Dhabi]</li>
               <li><a href="#">Course Assistant &amp; Peer Mentor</a> at <a href="#">Abu Dhabi University</a>: 50+ certified tutoring hours per semester across five consecutive semesters (250+ hours) in mathematics, physics, chemistry, and engineering; mentored ~10 first-year students each semester (50+ overall). [5 semesters, Abu Dhabi]</li>
             </ol>
 
@@ -168,6 +171,25 @@
                   <li class="skill" style="border-color:#e879f9">MILP</li>
                 </ul>
               </article>
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#e879f9,#3219a2)" aria-hidden="true"></div>
+                <h3>AEX-128 MILP Analysis &mdash; Independent Reproduction</h3>
+                <p>Rebuilt the byte-truncated differential MILP model from scratch and exhaustively solved all 59,049 execution paths to proven optimality, with a solver-free dynamic-programming cross-verification; validated by reproducing the classical 5-round AES bound of 26 active S-boxes. <a href="https://github.com/Mezrait/aex128-milp-reproduction" target="_blank" rel="noopener">github.com/Mezrait/aex128-milp-reproduction &#8599;</a></p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#61dafb">Python</li>
+                  <li class="skill" style="border-color:#e879f9">MILP (PuLP/HiGHS)</li>
+                </ul>
+              </article>
+              <article class="project-card">
+                <div class="project-card__thumb" style="background:linear-gradient(135deg,#009485,#a78bfa)" aria-hidden="true"></div>
+                <h3>Secure Collaborative Cyber Threat Intelligence Platform</h3>
+                <p>Fall 2026 capstone (team of 4; supervisor: <a href="https://gep.adu.ac.ae/faculty/abid-mehmood" target="_blank" rel="noopener">Dr. Abid Mehmood</a>). Three-tier platform for cross-organization sharing of indicators of compromise under NIST SP&nbsp;800-207 zero-trust constraints: multi-stage human-verified intel pipeline, OWASP-based threat model, cryptographically hash-chained append-only audit log for tamper evidence, MITRE ATT&amp;CK mapping, organization-scoped visibility tiers.</p>
+                <ul class="tag-list">
+                  <li class="skill" style="border-color:#a78bfa">Zero-Trust</li>
+                  <li class="skill" style="border-color:#14b8a6">Threat-Intel</li>
+                  <li class="skill" style="border-color:#e879f9">Audit-Log Crypto</li>
+                </ul>
+              </article>
             </div>
             <h3 class="category-heading">Security &amp; Software</h3>
             <div class="project-grid">
@@ -197,17 +219,24 @@
             <p class="eyebrow">Peer-reviewed</p>
             <div class="pub-header">
               <h2>Publications</h2>
-              <p class="pub-count">1 journal publication</p>
+              <p class="pub-count">1 journal publication &middot; 1 manuscript under review</p>
             </div>
-            <p class="pub-intro">Peer-reviewed research in symmetric cryptography.</p>
+            <p class="pub-intro">Peer-reviewed research in symmetric cryptography, plus independent work in computational number theory.</p>
 
             <article class="pub-card">
               <p class="eyebrow">Journal Article / 2026</p>
               <h3>AEX-128: A Key-Dependent Finite-State SPN&ndash;ARX Hybrid Block Cipher</h3>
-              <p class="pub-card__authors">M. Alawida, <strong>M. L. Menber</strong></p>
+              <p class="pub-card__authors">M. Alawida, <strong>M. L. Menber</strong>, W. H. Alshoura, R. Almajed, S. Almuhammadi</p>
               <p class="pub-card__venue">IEEE Access, 2026 &mdash; doi: 10.1109/ACCESS.2026.3730739</p>
-              <p>A 128-bit hybrid block cipher whose round structure is governed by a key-dependent finite-state machine with 59,049 possible execution paths. Security evaluation includes MILP-based active S-box analysis (36 active S-box minimum), SAC testing with chi-square analysis, and NIST SP 800-22 statistical testing.</p>
+              <p>A 128-bit hybrid block cipher whose round structure is governed by a key-dependent finite-state machine with 59,049 possible execution paths. Evaluated via MILP-based active S-box analysis, SAC testing with chi-square analysis, and NIST SP 800-22 statistical testing.</p>
               <a href="https://doi.org/10.1109/ACCESS.2026.3730739" target="_blank" rel="noopener">View publication &#8599;</a>
+            </article>
+            <article class="pub-card">
+              <p class="eyebrow">Manuscript Submitted / 2026</p>
+              <h3>Odd Solutions of &sigma;(m) = 2m &plusmn; 2 Have At Least Seven Distinct Prime Factors</h3>
+              <p class="pub-card__authors"><strong>M. Menber</strong> (sole author)</p>
+              <p class="pub-card__venue">Submitted to the Journal of Number Theory &mdash; under review</p>
+              <p>Independent research in computational number theory: proves that odd solutions of two near-perfect divisor-sum equations have at least seven distinct prime factors, with consequences for odd weird numbers, using an exact branch-and-bound search in rational arithmetic with certified search trees.</p>
             </article>
           </div>
         </section>
@@ -221,23 +250,23 @@
                 <p class="github-card__stats">8 public repositories</p>
               </div>
             </div>
-            <h2>My Most Popular Repositories on GitHub</h2>
+            <h2>Repositories on GitHub</h2>
             <div class="project-grid">
               <article class="project-card">
-                <h3>Digital-Forensics-Project-NIST-Case-Study-Data-Leakage</h3>
+                <h3><a href="https://github.com/Mezrait/aex128-milp-reproduction" target="_blank" rel="noopener">aex128-milp-reproduction &#8599;</a></h3>
+                <p>Independent reproduction of the MILP active S-box analysis of the AEX-128 block cipher (IEEE Access 2026). Python, PuLP/HiGHS, 59,049 execution paths solved to proven optimality, DP cross-verification, AES-26 sanity check.</p>
+              </article>
+              <article class="project-card">
+                <h3><a href="https://github.com/Mezrait/Digital-Forensics-Project-NIST-Case-Study-Data-Leakage" target="_blank" rel="noopener">Digital-Forensics-Project-NIST-Case-Study-Data-Leakage &#8599;</a></h3>
                 <p>Hands-on digital forensics using the NIST Data Leakage case study &mdash; evidence recovery, investigation techniques, and forensic tooling, with a full report.</p>
               </article>
               <article class="project-card">
-                <h3>Farm-Produce-Delivery-System</h3>
+                <h3><a href="https://github.com/Mezrait/CSE200" target="_blank" rel="noopener">CSE200 &mdash; Bank Security Audit &#8599;</a></h3>
+                <p>Cybersecurity risk and resilience audit of Abu Dhabi Islamic Bank: asset classification, risk register, and control recommendations with cost-benefit analysis.</p>
+              </article>
+              <article class="project-card">
+                <h3><a href="https://github.com/Mezrait/Farm-Produce-Delivery-System" target="_blank" rel="noopener">Farm-Produce-Delivery-System &#8599;</a></h3>
                 <p>Java online marketplace &mdash; OOP, custom exceptions, interfaces, concurrency, and multithreading.</p>
-              </article>
-              <article class="project-card">
-                <h3>CSE200 &mdash; Bank Security Audit</h3>
-                <p>Cybersecurity risk and resilience audit of a major bank: asset classification, risk register, and control recommendations with cost-benefit analysis.</p>
-              </article>
-              <article class="project-card">
-                <h3>Encryption_Decryption_Project</h3>
-                <p>Java implementations of classical and modern encryption schemes.</p>
               </article>
             </div>
           </div>
